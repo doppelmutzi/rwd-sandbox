@@ -1,0 +1,78 @@
+.grid-container {
+	@extend .container-fluid;
+	.wrapper {
+		@extend .row;
+	}
+	.grid1, .grid2, .grid3 {
+		@extend .col-sm-4;
+	}
+	.grid1 {
+		background: red;
+	}
+	.grid2 {
+		background: blue;
+	}
+	.grid3 {
+		background: yellow;
+	}
+}
+
+/*
+Restive way
+*/
+
+.tablet.css_xs .grid-container .grid3 > span:before {
+	content : "tablet css_xs ";
+}
+
+.css_xs .grid-container .grid3 > span:before {
+	content : "css_xs ";
+}
+
+.phone .grid-container .grid3 > span:before {
+	content : "phone ";
+}
+
+.css_sm .grid-container .grid3  > span:before {
+	content : "css_sm ";
+}
+
+.css_md .grid-container .grid3 > span:before {
+	content : "css_md ";
+}
+
+.css_lg .grid-container .grid3 > span:before {
+	content : "css_lg ";
+}
+
+/*
+Bootstrap way
+*/
+
+/* xs */
+@media (max-width: 768px) {
+	.grid-container .grid3 > span:after {
+		content : " col-xs";
+	}
+}
+
+/* sm */
+@media (min-width: 769px) and (max-width: 991px) {
+	.grid-container .grid3 > span:after {
+		content : " col-sm";
+	}
+}
+
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.grid-container .grid3 > span:after {
+		content : " col-md";
+	}
+}
+
+/* lg */
+@media (min-width: 1200px) {
+	.grid-container .grid3 > span:after {
+		content : " col-lg";
+	}
+}

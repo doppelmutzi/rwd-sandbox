@@ -1,0 +1,28 @@
+@import "compass",
+        "compass/utilities/general/clearfix",
+        "compass/css3",
+        "compass/css3/inline-block",
+        "compass/typography/lists/bullets";
+
+
+/* Variables available for the differen scss files below */
+@import "variables";
+
+/* import customized bootstrap css file */
+@import "bootstrap/bootstrap";
+
+/* import app specific sass/compass files. These are pattern-spanning */
+@import "global/*.*",
+
+/* 
+import pattern-specific sass/compass files 
+Import order is important
+*/      
+        "atoms/*.*",
+        "molecules/*.*",
+        "organisms/*.*", 
+        "templates/*.*",  
+        "pages/*.*";     
+
+
+

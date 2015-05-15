@@ -1,0 +1,19 @@
+default:
+    - bower_concat
+    - compass        
+    - 'uglify:dest'
+    - 'shell:copy_over_styleguide' 
+    - 'shell:patternlab'
+
+'build-patternlab':
+    - 'shell:patternlab'
+
+export:
+    - 'shell:empty_folder_export'
+    - 'copy:css'
+    - 'copy:js'
+    - 'copy:fonts'
+    - 'copy:images'
+    - 'copy:html'    
+    - cssmin   
+    - 'uglify:prod'

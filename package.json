@@ -1,0 +1,27 @@
+{
+  "name": "sandbox-rwd-bootstrap-restive-patternlab",
+  "description": "sandbox-rwd-bootstrap-restive-patternlab",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-bower-concat": "^0.4.0",
+    "grunt-cleanempty": "^1.0.2",
+    "grunt-contrib-compass": "~0.7.2",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-cssmin": "^0.11.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-pagespeed": "~0.2.0",
+    "grunt-remove-logging-calls": "^0.1.0",
+    "grunt-shell": "~0.6.4",
+    "grunt-uncss": "^0.4.2",
+    "load-grunt-config": "~0.7.0",
+    "load-grunt-tasks": "~0.4.0",
+    "local-web-server": "^0.5.15",
+    "ngrok": "~0.1.97"
+  },
+  "scripts": {
+    "start": "ws --port 9000 -d public/",
+    "auto-reload": "php core/builder.php -wr"
+  }
+}
