@@ -1,6 +1,20 @@
 module.exports = {
-	css : {
-		src: '<%= paths.dest.css %>/style.css',
-	    dest: '<%= paths.app.css %>/style.css'
-	}   
+	dest : {
+		options: {
+          compatibility: 'ie8',
+          keepSpecialComments: 0
+        },
+        files: {
+          '<%= paths.dest.css %>/style.min.css': '<%= paths.dest.css %>/style.css'
+        }
+	},
+	app : {
+		options: {
+          compatibility: 'ie8',
+          keepSpecialComments: 0
+        },
+        files: {
+          '<%= paths.app.css %>/cleaned-style.min.css': '<%= paths.app.css %>/cleaned-style.css'
+        }
+	}  
 };

@@ -1,6 +1,7 @@
 default:
     - bower_concat
-    - compass        
+    - compass      
+    - 'cssmin:dest'  
     - 'uglify:dest'
     - 'shell:copy_over_styleguide' 
     - 'shell:patternlab'
@@ -15,5 +16,7 @@ export:
     - 'copy:fonts'
     - 'copy:images'
     - 'copy:html'    
-    - cssmin   
+    - uncss
+    - 'cssmin:app'   
     - 'uglify:prod'
+    - processhtml

@@ -1,11 +1,15 @@
 module.exports = {
-    "uncss": {
-        "dist": {
-            src: ['/Users/sweber/dev/sandbox-rwd-bootstrap-restive-patternlab/source/test.html'],
-            dest: '/Users/sweber/dev/sandbox-rwd-bootstrap-restive-patternlab/source/tidy.css',
-            options: {
-              report: 'min' // optional: include to report savings
-            }   
-        }
-    }
+
+    "dest": {
+    	options: {
+    		/* ignore stylesheets */
+    		stylesheets : [
+    			"../../../styleguide/css/styleguide.css",
+    			"../../../styleguide/css/styleguide-specific.css",
+    		]
+    	},
+    	src: ['<%= paths.app.html %>/03-templates-00-basic-grid-system/03-templates-00-basic-grid-system.html'],
+    	dest: '<%= paths.app.css %>/cleaned-style.css'
+	}
+    
 };
