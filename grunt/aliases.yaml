@@ -1,9 +1,8 @@
 default:
     - bower_concat
-    - compass      
-    - 'cssmin:dest'  
+    - compass
     - 'uglify:dest'
-    - 'shell:copy_over_styleguide' 
+    - 'shell:copy_over_styleguide'
     - 'shell:patternlab'
 
 'build-patternlab':
