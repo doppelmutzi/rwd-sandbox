@@ -1,4 +1,5 @@
 default:
+    - 'grunticon:icons'
     - bower_concat
     - compass
     - 'uglify:dest'
